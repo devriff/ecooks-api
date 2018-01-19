@@ -27,7 +27,7 @@ class PrivateController Extends CI_Controller {
     $type = strtolower($type);
     switch ($type) {
       case $type === 'e':
-      $template = "<div class='uk-alert-danger' uk-alert><a class='uk-alert-close' uk-close></a><p>Success! ". $message . "</p></div>";
+      $template = "<div class='uk-alert-danger' uk-alert><a class='uk-alert-close' uk-close></a><p>". $message ."</p></div>";
       break;
 
       case $type === 's':

@@ -20,7 +20,7 @@ class Dashboard extends PrivateController {
     if ($result) {
       $this->_msg('s','Category Added!', site_url('Dashboard'));
     } else {
-      $this->_msg('e','Error!', site_url('Dashboard'));
+      $this->_msg('e','Error to add Category!', site_url('Dashboard'));
     }
   }
 
@@ -46,7 +46,7 @@ class Dashboard extends PrivateController {
       if ($result) {
         $this->_msg('s','Recipe Added!', site_url('Dashboard'));
       } else {
-        $this->_msg('s','Recipe Added!', site_url('Dashboard'));
+        $this->_msg('e','Error to add Recipe!', site_url('Dashboard'));
       }
     }
   }

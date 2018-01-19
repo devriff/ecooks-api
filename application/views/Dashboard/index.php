@@ -1,5 +1,5 @@
 <div class="uk-container">
-  <h1>Richard Gamora</h1>
+  <h1>eCooks Admin Panel</h1>
   <a href="#add-recipe" uk-toggle class="uk-button uk-button-primary uk-button-small">Add Recipe</a>
   <a href="#add-category" uk-toggle class="uk-button uk-button-primary uk-button-small">Add Category</a>
   <a class="uk-button uk-button-primary uk-button-small">Logout</a>
