@@ -35,7 +35,7 @@ class Recipe extends CI_Model {
       ->join('categories', 'categories.category_id = recipes.category_id')
       ->where('recipes.recipe_id', $recipe_id)
       ->get();
-      return $query->result() >= 1 ? $query->result_array() : false;
+      return $query->result() >= 1 ? $query->row() : false;
   }
 
   public function _search_recipes ($keywords = false) {
