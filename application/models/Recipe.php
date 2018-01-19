@@ -30,7 +30,7 @@ class Recipe extends CI_Model {
 
   public function _get_recipe ($recipe_id = false) {
       $query = $this->db
-      ->select('recipes.recipe_id, recipes.name as recipe, recipes.instructions, recipes.img_url, categories.name as category')
+      ->select('recipes.recipe_id, recipes.name as recipe, recipes.ingredients, recipes.instructions, recipes.img_url, categories.name as category')
       ->from('recipes')
       ->join('categories', 'categories.category_id = recipes.category_id')
       ->where('recipes.recipe_id', $recipe_id)

@@ -80,7 +80,7 @@
             </div>
         </div>
         <div class="uk-margin">
-            <select class="uk-select" name="category_id">
+            <select class="uk-select" name="category_id" required>
                 <option value="">Category</option>
                 <?php if ($categories): ?>
                     <?php foreach ($categories as $key => $cat): ?>
@@ -91,6 +91,9 @@
                     <option>No Categories.</option>
                 <?php endif ?>
             </select>
+        </div>
+        <div class="uk-margin">
+            <textarea class="uk-textarea" rows="10" placeholder="Ingredients:" name="ingredients"></textarea>
         </div>
         <div class="uk-margin">
             <textarea class="uk-textarea" rows="10" placeholder="Instructions:" name="instructions"></textarea>

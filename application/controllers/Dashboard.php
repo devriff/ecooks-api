@@ -34,6 +34,7 @@ class Dashboard extends PrivateController {
     $save_data['name'] = $this->input->post('name');
     $save_data['description'] = $this->input->post('description');
     $save_data['category_id'] = $this->input->post('category_id');
+    $save_data['ingredients'] = $this->input->post('ingredients');
     $save_data['instructions'] = $this->input->post('instructions');
     $save_data['img_url'] = $config['file_name'];
     $this->load->library('upload', $config);
