@@ -38,12 +38,12 @@ class Recipe extends CI_Model {
       return $query->result() >= 1 ? $query->row() : false;
   }
 
-  public function _search_recipes ($keywords = false) {
-    if ($keywords) {
+  public function _search_recipes ($keyword = false) {
+    if ($keyword) {
       $query="SELECT *
       FROM recipes
       WHERE name LIKE ?";
-      $result = $this->db->query($query, array('%'.$keywords.'%')); 
+      $result = $this->db->query($query, array('%'.$keyword.'%')); 
       return $result->num_rows()>=1 ? $result->result() : false; 
     } else {
       return false;

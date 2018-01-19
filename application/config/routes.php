@@ -58,5 +58,5 @@ $route['categories/(:num)/recipes']['GET'] = 'Recipes/get_recipes/$1';
 // recipes
 $route['recipes/(:num)']['GET'] = 'Recipes/get_recipe/$1';
 $route['recipes']['GET'] = 'Recipes/get_recipes';
-$route['recipes/search']['GET'] = 'Recipes/search_recipes';
+// $route['recipes/search']['GET'] = 'Recipes/search_recipes';
 
