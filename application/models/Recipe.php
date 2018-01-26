@@ -49,4 +49,9 @@ class Recipe extends CI_Model {
       return false;
     }
   }
+
+  public function _delete_recipe ($recipe_id = false) {
+    $this->db->delete('recipes', array('recipe_id' => $recipe_id)); 
+    return $this->db->affected_rows() >= 1 ? true : false;
+  }
 }

@@ -50,4 +50,22 @@ class Dashboard extends PrivateController {
       }
     }
   }
+
+  public function delete_category ($category_id) {
+    $result = $this->Category->_delete_category($category_id);
+    if ($result) {
+      $this->_msg('s','Category Deleted!', site_url('Dashboard'));
+    } else {
+      $this->_msg('e','Error to delete Category!', site_url('Dashboard'));
+    }
+  }
+
+  public function delete_recipe ($recipe_id) {
+    $result = $this->Recipe->_delete_recipe($recipe_id);
+    if ($result) {
+      $this->_msg('s','Recipe Deleted!', site_url('Dashboard'));
+    } else {
+      $this->_msg('e','Error to delete Recipe!', site_url('Dashboard'));
+    }
+  }
 }

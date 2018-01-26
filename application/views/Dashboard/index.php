@@ -8,11 +8,11 @@
         <?php echo $system_message; ?>
         <div class="uk-card uk-card-default uk-card-small uk-card-body">
             <h3 class="uk-card-title">Categories</h3>
-            <ul class="uk-list uk-list-large">
+            <ul class="uk-list uk-list-divider">
                 <?php if ($categories): ?>
                     <?php foreach ($categories as $key => $cat): ?>
-                        <li><?php echo $cat['name']; ?>
-                            <p><?php echo $cat['description']; ?></p>
+                        <li><strong><?php echo $cat['name']; ?></strong>
+                            <p><a href="<?=site_url('Dashboard/delete_category/'.$cat['category_id'])?>" uk-icon="icon: trash" onclick="return deleteCategoryConfirm()"></a></p>
                         </li>
                     <?php endforeach ?>
                 <?php endif ?>
@@ -31,7 +31,7 @@
                         <dt><strong><?php echo $recipe['recipe']; ?></strong></dt>
                         <dd><?php echo $recipe['category']; ?></dd>
                         <a href="" uk-icon="icon: pencil"></a>
-                        <a href="" uk-icon="icon: trash"></a>
+                        <a href="<?=site_url('Dashboard/delete_recipe/'.$recipe['recipe_id'])?>" uk-icon="icon: trash" onclick="return deleteRecipeConfirm()"></a>
                     <?php endforeach ?>
                 <?php endif ?>
                 <?php if (!$recipes): ?>
@@ -105,3 +105,11 @@
 </div>
 <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
 <script>tinymce.init({ selector:'textarea' });</script>
+<script>
+function deleteCategoryConfirm() {
+  return confirm('Are you sure want to delete this category?');
+}
+function deleteRecipeConfirm() {
+  return confirm('Are you sure want to delete this recipe?');
+}
+</script>
